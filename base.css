@@ -99,16 +99,17 @@ body {
     .acces {
         position: fixed;
         background: linear-gradient(-15deg, rgb(50, 70, 185) 25%, rgba(16, 9, 36, 0.938) 90%);
-        top: 0;
+        border-radius: 1000px;
+        top: -100%;
         right: -100%;
-        width: 100vw;
-        height: 100vh;
+        width: 0vw;
+        height: 0vh;
         margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 80px;
-        transition: 0.25s;
+        transition: 0.5s;
         overflow: auto;
     }
     .acces a {
@@ -125,6 +126,14 @@ body {
     }
     #chk:checked ~ .acces {
         right: 0;
+        top: 0;
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #chk:checked ~ .show-menu {
+        visibility: hidden;
     }
 }
 
