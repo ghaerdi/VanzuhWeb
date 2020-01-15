@@ -1,0 +1,59 @@
+.caja {
+    width: 100vw;
+    min-height: 90vh;
+}
+
+.contacto {
+    margin: 100px 20vw;
+
+}
+
+.contacto div {
+    text-align: center;
+}
+
+.redes i{
+    margin: 100px 10px 50px;
+    transition: 0.5s;
+}
+
+.redes i:hover {
+    color: rgb(255, 109, 121);
+}
+
+.cosas{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.cosas ajio {
+    margin: 50px;
+}
+
+@media screen and (max-width: 750px) {
+    .contacto {
+        margin: 50px 10vw;
+    }
+} 
+
+@media screen and (max-width: 600px) {
+    .redes i {
+        margin: 50px 5px;
+    }
+    .cosas ajio{
+        margin: 10px;
+    }
+} 
+
+@media screen and (max-width: 400px) {
+    .contacto {
+        margin: 50px 10px;
+    }
+    .cosas {
+        flex-direction: column-reverse;
+    }
+    .redes i {
+        margin: 50px 1px;
+    }
+} 

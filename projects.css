@@ -1,0 +1,48 @@
+#projects {
+    width: 100vw;
+    min-height: 90vh;
+}
+
+.box{
+    margin: 50px 10%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:  50px repeat(2, 1fr);
+    align-items: center;
+}
+
+.box span {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.box img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.box a img:hover {
+    background-color: rgb(255, 109, 121);
+    filter: grayscale(1) opacity(0.90) blur(2.5px);
+}
+
+@media screen and (max-width: 1000px) {
+    .box{
+        grid-template-columns: 1fr 1fr;
+        margin: 25px 5%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .box{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    * {
+        font-size: 12px;
+    }
+}

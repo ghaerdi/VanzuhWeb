@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Baloo Bhai", cursive;
+    color: #fff;
+    text-shadow: rgba(4, 3, 22, 0.479) -1px 1px 2.5px;
+    font-size: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: linear-gradient(27deg, rgb(75, 188, 207) 0%, rgb(38, 28, 75) 90%);
+}
+
+.show-menu,
+.hide-menu,
+#chk {
+    display: none;
+}
+
+#top {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-content: center;
+}
+
+.nav {
+    margin: 0 2.5%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.nav span {
+    font-size: 2rem;
+    color: rgb(255, 109, 121);
+    text-shadow: rgba(75, 0, 25, 0.637) 2px 2px 5px;
+}
+
+.acces a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.show-menu i,
+.hide-menu i {
+    transition: 0.5s;
+}
+
+.acces a:hover, .show-menu i:hover, .hide-menu i:hover {
+    color: rgb(255, 109, 121);
+}
+
+.footer {
+    min-height: 100px;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer .name {
+    display: flex;
+    align-items: center;
+}
+
+.footer .name i {
+    margin-right: 5px;
+}
+
+.footer .name i, .footer .name div, .footer .year {
+    color: rgba(255, 255, 255, 0.486);
+}
+
+@media screen and (max-width: 950px) {
+    * {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .show-menu, .hide-menu {
+        display: block;
+    }
+    .acces {
+        position: fixed;
+        background: linear-gradient(-15deg, rgb(50, 70, 185) 25%, rgba(16, 9, 36, 0.938) 90%);
+        top: 0;
+        right: -100%;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+        transition: 0.25s;
+    }
+    .acces a {
+        padding: 10vh 0;
+    }
+    .nav {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .hide-menu {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+    #chk:checked ~ .acces {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav span {
+        font-size: 1.20rem;
+        letter-spacing: 5px;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .acces {
+        padding-top: 25px;
+    }
+    .acces a {
+        padding: 5vh 0;
+    }
+}

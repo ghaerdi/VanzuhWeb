@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#top {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+.header {
+    background-color: rgba(22, 22, 22, 0.904);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.content {
+    text-transform: uppercase;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 0 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: inherit;
+    margin: 0 20px;
+    transition: 0.25s;
+}
+.subscribe {
+    background: rgb(255, 72, 59);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.menu a,
+.show-menu-btn,
+.hide-menu-btn {
+    cursor: pointer;
+}
+
+#chk {
+    display: none;
+}
+
+.menu .logo {
+    display: none;
+}
+
+.show-menu-btn, .hide-menu-btn {
+    display: none;
+    transition: 0.25s;
+}
+
+.menu a:not(.subscribe):hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+    color: rgb(98, 98, 255);
+
+}
+
+.menu a:not(.subscribe):hover {
+    border-bottom: rgb(98, 98, 255) solid 2.5px;
+}
+
+.subscribe:hover {
+    background: #a10000;
+}
+
+.home {
+    top: 75px;
+    height: 80vh;
+    width: 100%;
+    background: url(https://www.10wallpaper.com/wallpaper/1920x1080/1502/sky_full_of_stars-Landscapes_HD_Wallpaper_1920x1080.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.home h3 {
+    letter-spacing: 10px;
+}
+
+.home p {
+    letter-spacing: 3.25px;
+}
+
+#section-1 {
+    background: rgb(226, 226, 226);
+    width: 100%;
+    min-height: 80vh;
+}
+
+.about {
+    background-color: #fff;
+    margin: 0 100px;
+    padding: 20px 10% 20px 10%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "title title"
+                        "picture-1 content-1"
+                        "picture-1 subscribe" 
+                        "content-2 picture-2";
+}
+
+.about .title {
+    font-size: 2.5rem;
+    text-align: center;
+    grid-area: title;
+}
+
+.about .picture-1 {
+    grid-area: picture-1;
+    justify-self: right;
+}
+
+.about .subscribe {
+    grid-area: subscribe;
+    justify-self: center;
+    align-self: center;
+    font-size: 2rem;
+}
+
+.about .picture-2 {
+    grid-area: picture-2;
+}
+
+.about .content-1 {
+    grid-area: content-1;
+}
+
+.about .content-2 {
+    grid-area: content-2;
+    text-align: right;
+}
+
+#section-0 {
+    background: rgb(22, 22, 22);
+    width: 100%;
+    min-height: 15vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-0 h3 {
+    margin: 10px 100px;
+}
+
+#section-2 {
+    background: #fff;
+    width: 100%;
+    min-height: 50vh;
+}
+
+.services {
+    margin: 20px 100px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-areas: "title title title"
+                        "html css code"
+                        "content-1 content-2 content-3";
+}
+
+.services .title {
+    font-size: 2.5rem;
+    text-align: center;
+    grid-area: title;
+}
+
+.services .fa-html5 {
+    color: orangered;
+    justify-self: center;
+    grid-area: html;
+}
+
+.services .fa-css3 {
+    color: blue;
+    justify-self: center;
+    grid-area: css;
+}
+
+.services .fa-code {
+    color: grey;
+    justify-self: center;
+    grid-area: code;
+}
+
+.services .content-1 {
+    grid-area: content-1;
+    text-align: center;
+}
+
+.services .content-2 {
+    grid-area: content-2;
+    text-align: center;
+}
+
+.services .content-3 {
+    grid-area: content-3;
+    text-align: center;
+}
+
+#section-3 {
+    background: rgb(194, 70, 70);
+    width: 100%;
+    min-height: 25vh;
+}
+
+.works {
+    margin: 0 20%;
+    padding: 20px 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.works .title {
+    font-size: 2.25rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / -1;
+}
+
+.works a {
+    width: 200px;
+    height: 200px;
+    background: url(https://cn.i.cdn.ti-platform.com/content/934/showpage/somos-osos/es/webarebears-200x200.png);
+    text-decoration: none;
+    align-self: center;
+    justify-self: center;
+}
+
+.works a div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.works a div p {
+    color: rgba(255, 255, 255, 0);
+    font-style: bold;
+    transition: 0.5s;
+}
+
+.works a div:hover {
+    background-color: rgba(100, 148, 237, 0.767);
+}
+
+.works a div:hover > p {
+    color: #fff;
+}
+
+#section-4 {
+    width: 100%;
+    min-height: 50vh;
+    background: url(tokyo.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.subs-section {
+    background: rgba(37, 37, 37, 0.856);
+    width: 80%;
+    min-height: 200px;
+    border-radius: 15px;
+    margin: 0px 10%;
+
+    color: #fff;
+    font-size: 1.15rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formulario {
+    margin: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formulario .title {
+    font-size: 2.25rem;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.formulario div:not(.title) {
+    text-transform: uppercase;
+    text-align: center;
+    border: #fff 2px solid;
+    border-radius: 15px;
+    padding: 0 10px;
+}
+
+.formulario .subscribe {
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    grid-column: 1 / -1;
+}
+
+.formulario div input {
+    width: 100%;
+    height: 40px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.contact {
+    background-color: rgba(22, 22, 22, 0.897);
+    border-radius: 15px;
+    margin: 20px;
+    display: grid;
+    grid-template-areas: "title title"
+                            "correo social"
+                            "telefono social";
+}
+
+.contact .title {
+    font-size: 2.25rem;
+    grid-area: title;
+    text-align: center;
+}
+
+.contact .email {
+    grid-area: correo;
+    text-align: center;
+    align-self: center;
+}
+
+.contact .telephone {
+    grid-area: telefono;
+    text-align: center;
+    align-self: center;
+}
+
+.contact .social-media {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .social-media a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact .social-media i {
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.contact .social-media i:hover {
+    color: rgb(194, 70, 70);
+}
+
+.section-5 {
+    background-color: rgb(22, 22, 22);
+    min-height: 100px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.164);
+    font-size: 1.25rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
