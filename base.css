@@ -56,6 +56,7 @@ body {
 
 .show-menu i,
 .hide-menu i {
+    cursor: pointer;
     transition: 0.5s;
 }
 
@@ -110,7 +111,7 @@ body {
         transition: 0.25s;
     }
     .acces a {
-        padding: 10vh 0;
+        margin: 10vh 0;
     }
     .nav {
         display: flex;
