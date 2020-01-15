@@ -109,6 +109,7 @@ body {
         align-items: center;
         padding-top: 80px;
         transition: 0.25s;
+        overflow: auto;
     }
     .acces a {
         margin: 10vh 0;
@@ -139,6 +140,6 @@ body {
         padding-top: 25px;
     }
     .acces a {
-        padding: 5vh 0;
+        margin: 5vh 0;
     }
 }
