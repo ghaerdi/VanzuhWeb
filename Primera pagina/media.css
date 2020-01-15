@@ -40,7 +40,7 @@
 }
 
 @media (max-width: 800px) {
-    .show-menu-btn, .hide-menu-btn {
+    .show-menu-btn {
         display: block;
     }
     .menu {
